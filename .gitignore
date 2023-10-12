@@ -1,3 +1,7 @@
 .gitreview
 *.tgz
 .idea
+
+sdc-dist
+sdc-libs
+sdc-volume

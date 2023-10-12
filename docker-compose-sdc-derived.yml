@@ -1,0 +1,16 @@
+
+version: '3'
+services:  
+  dav-sdc:
+    build: 
+      context: .
+      dockerfile: Dockerfile-derived
+    image: dav-sdc-derived:3.17.1-0030-001
+    volumes:
+      #- ./sdc-volume/etc/sdc:/etc/sdc
+      - ./sdc-volume/data:/data
+      - ./sdc-volume/logs:/logs
+      #- ./sdc-volume/resources:/resources
+      - ./sdc-volume/opt/streamsets-datacollector-user-libs:/opt/streamsets-datacollector-user-libs
+    ports:
+      - "18630:18630"
